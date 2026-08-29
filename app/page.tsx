@@ -5,7 +5,15 @@ import { motion, type Variants } from "framer-motion";
 import { Mail, MessageCircle, Download } from "lucide-react";
 import { useState, type ChangeEvent, type FormEvent } from "react";
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaGithub } from "react-icons/fa";
+
+import {
+  FaPython,
+  FaDatabase,
+  FaDraftingCompass,
+} from "react-icons/fa";
+
 import { RiNextjsFill } from "react-icons/ri";
+import { SiC } from "react-icons/si";
 
 interface Certification {
   id: number;
@@ -297,43 +305,59 @@ export default function Home() {
       </section>
 
       {/* ABOUT SECTION */}
-      <section id="about" className="py-24 text-center border-t border-neutral-900 relative overflow-hidden">
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_20%,rgba(37,99,235,0.12),transparent_45%)]" />
+<section
+  id="about"
+  className="min-h-screen flex flex-col justify-center text-center border-t border-neutral-900 relative overflow-hidden px-6"
+>
+  <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_20%,rgba(37,99,235,0.12),transparent_45%)]" />
 
-        <p className="tracking-[0.35em] uppercase text-blue-400 text-sm mb-4">
-          Get To Know Me
-        </p>
-        <h2 className="text-4xl md:text-5xl font-extrabold mb-8 text-white">
-          About Me
-        </h2>
+  <p className="tracking-[0.3em] uppercase text-blue-400 text-sm mb-3">
+    Get To Know Me
+  </p>
 
-        <p className="max-w-4xl mx-auto text-center text-neutral-300 text-lg md:text-xl lg:text-2xl leading-9 md:leading-10 font-light tracking-wide">
-          I am <span className="font-semibold text-white">Abhishek Tomar</span>, a B.Tech Computer Science and Engineering student at Lovely Professional University with a strong interest in
-          <span className="text-cyan-400 font-medium"> Artificial Intelligence</span>,
-          <span className="text-cyan-400 font-medium"> Machine Learning</span>, and
-          <span className="text-cyan-400 font-medium"> Software Development</span>.
-          I enjoy building innovative solutions that bridge technology and real-world challenges.
-        </p>
+  <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-white">
+    About Me
+  </h2>
 
-        <p className="max-w-4xl mx-auto text-center text-neutral-400 text-lg md:text-xl lg:text-2xl leading-9 md:leading-10 font-light tracking-wide mt-8">
-          My experience includes developing modern web applications using
-          <span className="text-white font-medium"> Next.js</span>,
-          <span className="text-white font-medium"> React</span>,
-          <span className="text-white font-medium"> Tailwind CSS</span>,
-          <span className="text-white font-medium"> Node.js</span>,
-          <span className="text-white font-medium"> Express.js</span>, and
-          <span className="text-white font-medium"> MongoDB</span>.
-          I have also worked on hardware-integrated projects involving
-          <span className="text-emerald-400 font-medium"> Arduino</span>,
-          <span className="text-emerald-400 font-medium"> IoT Systems</span>,
-          <span className="text-emerald-400 font-medium"> Renewable Energy Harvesting</span>, and
-          <span className="text-emerald-400 font-medium"> Embedded Technologies</span>.
-        </p>
+  <div className="max-w-5xl mx-auto space-y-5">
+    <p className="text-neutral-300 text-base md:text-lg leading-relaxed">
+      I am <span className="font-semibold text-white">Abhishek Tomar</span>, a
+      B.Tech Computer Science and Engineering student at Lovely Professional
+      University with a strong interest in
+      <span className="text-cyan-400 font-medium"> Artificial Intelligence</span>,
+      <span className="text-cyan-400 font-medium"> Machine Learning</span>, and
+      <span className="text-cyan-400 font-medium"> Software Development</span>.
+      I enjoy building innovative solutions that bridge technology and
+      real-world challenges.
+    </p>
 
-        <p className="max-w-4xl mx-auto text-center text-neutral-400 text-lg md:text-xl lg:text-2xl leading-9 md:leading-10 font-light tracking-wide mt-8">
-          Beyond academics, I actively participate in hackathons, technical competitions, and self-learning initiatives to strengthen my problem-solving, programming, and project development skills. I enjoy exploring emerging technologies, collaborating with teams, and transforming ideas into practical products.
-        </p>
-      </section>
+    <p className="text-neutral-400 text-base md:text-lg leading-relaxed">
+      My experience includes developing modern web applications using
+      <span className="text-white font-medium"> Next.js</span>,
+      <span className="text-white font-medium"> React</span>,
+      <span className="text-white font-medium"> Tailwind CSS</span>,
+      <span className="text-white font-medium"> Node.js</span>,
+      <span className="text-white font-medium"> Express.js</span>, and
+      <span className="text-white font-medium"> MongoDB</span>. I have also
+      worked on hardware-integrated projects involving
+      <span className="text-emerald-400 font-medium"> Arduino</span>,
+      <span className="text-emerald-400 font-medium"> IoT Systems</span>,
+      <span className="text-emerald-400 font-medium">
+        Renewable Energy Harvesting
+      </span>
+      , and
+      <span className="text-emerald-400 font-medium">
+        Embedded Technologies
+      </span>.
+    </p>
+
+    <p className="text-neutral-400 text-base md:text-lg leading-relaxed">
+      Beyond academics, I actively participate in hackathons, technical
+      competitions, and self-learning initiatives to strengthen my
+      problem-solving, programming, and project development skills.
+    </p>
+  </div>
+</section>
 
       {/* PROJECTS SECTION */}
       <section id="projects" className="py-20 border-t border-neutral-900">
@@ -534,32 +558,7 @@ export default function Home() {
   </div>
 </section>
 
-      {/* SKILLS SECTION */}
-      <section id="skills" className="py-20 text-center border-t border-neutral-900">
-        <h2 className="text-3xl font-bold mb-10 text-white">Skills</h2>
-
-        <div className="flex flex-wrap justify-center gap-4">
-          {[
-            { name: "HTML", icon: <FaHtml5 />, color: "#E34F26" },
-            { name: "CSS", icon: <FaCss3Alt />, color: "#1572B6" },
-            { name: "JavaScript", icon: <FaJs />, color: "#F7DF1E" },
-            { name: "React", icon: <FaReact />, color: "#61DAFB" },
-            { name: "Next.js", icon: <RiNextjsFill />, color: "#FFFFFF" },
-            { name: "Node.js", icon: <FaNodeJs />, color: "#339933" },
-          ].map((skill) => (
-            <span
-              key={skill.name}
-              className="flex items-center gap-3 px-6 py-4 bg-neutral-900 border border-neutral-800 rounded-2xl hover:border-white hover:scale-105 transition text-base font-medium"
-            >
-              <span style={{ color: skill.color, fontSize: "2.2rem" }}>
-                {skill.icon}
-              </span>
-              {skill.name}
-            </span>
-          ))}
-        </div>
-      </section>
-
+    
       {/* CERTIFICATIONS SECTION */}
       <section id="certifications" className="py-20 border-t border-neutral-900">
         <h2 className="text-3xl font-bold text-center mb-2 text-white">Certifications</h2>
@@ -651,6 +650,38 @@ export default function Home() {
           ))}
         </motion.div>
       </section>
+        {/* SKILLS SECTION */}
+      
+{/* SKILLS SECTION */}
+<section id="skills" className="py-20 text-center border-t border-neutral-900">
+  <h2 className="text-3xl font-bold mb-10 text-white">Skills</h2>
+
+  <div className="flex flex-wrap justify-center gap-4">
+    {[
+      { name: "HTML", icon: <FaHtml5 />, color: "#E34F26" },
+      { name: "CSS", icon: <FaCss3Alt />, color: "#1572B6" },
+      { name: "JavaScript", icon: <FaJs />, color: "#F7DF1E" },
+      { name: "React", icon: <FaReact />, color: "#61DAFB" },
+      { name: "Next.js", icon: <RiNextjsFill />, color: "#FFFFFF" },
+      { name: "Node.js", icon: <FaNodeJs />, color: "#339933" },
+      { name: "Python", icon: <FaPython />, color: "#3776AB" },
+      { name: "C", icon: <SiC />, color: "#A8B9CC" },
+      { name: "DBMS", icon: <FaDatabase />, color: "#4DB33D" },
+      { name: "AutoCAD", icon: <FaDraftingCompass />, color: "#E51050" },
+    ].map((skill) => (
+      <span
+        key={skill.name}
+        className="flex items-center gap-3 px-6 py-4 bg-neutral-900 border border-neutral-800 rounded-2xl hover:border-white hover:scale-105 transition text-base font-medium"
+      >
+        <span style={{ color: skill.color, fontSize: "2.2rem" }}>
+          {skill.icon}
+        </span>
+        {skill.name}
+      </span>
+    ))}
+  </div>
+</section>
+
 
       {/* CONTACT SECTION */}
       <section id="contact" className="py-20 text-center border-t border-neutral-900">
