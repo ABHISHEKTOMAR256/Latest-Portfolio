@@ -168,17 +168,17 @@ export default function Home() {
           </p>
 
           <h1 className="leading-none font-extrabold">
-            <span className="block text-6xl md:text-8xl text-white">
+            <span className="block text-5xl md:text-7xl text-white">
               ABHISHEK
             </span>
 
-            <span className="block text-6xl md:text-8xl bg-gradient-to-r from-blue-300 via-blue-500 to-blue-700 bg-clip-text text-transparent">
+            <span className="block text-5xl md:text-7xl bg-gradient-to-r from-blue-300 via-blue-500 to-blue-700 bg-clip-text text-transparent">
               TOMAR
             </span>
           </h1>
 
           <p className="mt-8 text-lg md:text-xl text-neutral-400 max-w-2xl">
-            B.Tech CSE Student at LPU — AI/ML Enthusiast — Full-Stack Developer.
+            B.Tech CSE Student at LPU — AI/ML Enthusiast .
             Building intelligent and scalable applications.
           </p>
 
@@ -768,7 +768,7 @@ export default function Home() {
       </section>
 
       {/* FOOTER */}
-      <footer className="text-center py-10 text-neutral-600 border-t border-neutral-900">
+      <footer className="text-center py-8 text-neutral-600 border-t border-neutral-900">
         © {new Date().getFullYear()} Abhishek Tomar. All rights reserved.
       </footer>
     </main> 
